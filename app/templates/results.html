@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th{
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 16px;
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Transcribe</h2>
+
+<table>
+  <tr>
+    <th>File Name</th>
+    <th>Text</th>
+    <th>All Data</th>
+  </tr>
+
+  {% for item in result %}    
+  <tr>               
+      <td>{{ item.file }}</td>
+      <td>{{ item.result }}</td>
+      <td>{{ item }}</td>                            
+  </tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>
+
